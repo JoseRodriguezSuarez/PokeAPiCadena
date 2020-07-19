@@ -1,0 +1,30 @@
+
+{% block content %}
+<html>
+  <head><title>Buscar cadena evolutiva</title>
+  
+  </head>
+  <body>
+      <form method="get">
+        <p>Inserte el ID de la cadena evolutiva</p>
+        <input type ="text" name="id">
+        <input type="submit" value = "Buscar Cadena Evolutiva">
+      </form>
+        {% if data_total %}
+          <p>
+            <p><strong>CADENA EVOLUTIVA # {{ id }}</strong>
+              <p>{% for data in data_total  %}
+                <p>{{ data }}</sp>
+                {% endfor %}
+              </P>
+            </p>
+          </p>
+        {% endif %}  
+      
+  </body>
+
+{% endblock %}
+
+
+</html>
+
